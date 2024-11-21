@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login/login.css">
+    <title>WazePet - Login</title>
+</head>
+<body>
+    <header>
+        <h1>WazePet</h1>
+        <p class="description">A plataforma de ajuda para animais. Faça login e ajude a salvar vidas!</p>
+    </header>
+    
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" action="#">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
+            
+            <label for="password">Senha:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+            </div>
+            
+            <button type="submit">Entrar</button>
+            
+            <div class="forgot-password">
+                <a href="#">Esqueceu sua senha?</a>
+            </div>
+        </form>
+        
+        <p id="errorMessage" class="error"></p>
+        
+        <div class="create-account">
+            <p>Ainda não tem uma conta? <a href="#">Crie já</a></p>
+        </div>
+    </div>
+
+    <footer class="footer-text">
+        <p>© 2024 Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="login/login.js"></script>
+</body>
+</html>

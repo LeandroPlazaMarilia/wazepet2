@@ -1,0 +1,201 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  .dashboard {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+  }
+  
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Sidebar escondida inicialmente */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease;
+}
+.sidebar-nav.hidden {
+  display: none;
+}
+.toggle-nav {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.toggle-nav:hover {
+  background-color: #45a049;
+}
+
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Widgets */
+  .widgets {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .widget {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .widget h3 {
+    font-size: 18px;
+    color: #00796b;
+  }
+  
+  .widget p {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  /* Chart and Details */
+  .chart-details {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .chart {
+    flex: 2;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chart canvas {
+    width: 80%;   /* Ajusta a largura para o tamanho disponível */
+    height: 300px; /* Defina uma altura para o gráfico */
+    margin: 0 auto;
+  }
+  
+  .details {
+    flex: 1;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details h2 {
+    color: #00796b;
+    margin-bottom: 15px;
+  }
+  
+  .details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+  }
+  
+  .details li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .details button {
+    padding: 10px 15px;
+    background: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .details button:hover {
+    background: #005f54;
+  }
+  
+  
+  
+  /* Responsividade */
+  @media screen and (max-width: 768px) {
+    .dashboard {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      height: auto;
+    }
+  
+    .main-content {
+      padding: 10px;
+    }
+  
+    .widgets {
+      flex-direction: column;
+    }
+  
+    .widget {
+      margin-bottom: 20px;
+    }
+  
+    .chart-details {
+      flex-direction: column;
+    }
+  
+    .chart, .details {
+      flex: 1;
+      margin-bottom: 20px;
+    }
+  
+    .chart canvas {
+      width: 100%;
+      height: 250px;
+    }
+  }
+  

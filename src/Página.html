@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locais de Ajuda aos Animais</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="Página/Página.css">
+</head>
+<body>
+    <header>
+        <h1>Locais para Ajudar os Animais com Água e Rações</h1>
+    </header>
+
+    <section id="map-container">
+        <h2>Mapa de Localizações</h2>
+        <div id="map"></div>
+    </section>
+
+    <section id="local-list">
+        <h2>Locais para Ajudar</h2>
+        <ul>
+            <li>
+                <h3>Nova Marilia</h3>
+                <p>Localizado na região sul da cidade, o bairro Nova Marília é um local estratégico para distribuição de alimentos e água para animais em situação de rua.</p>
+            </li>
+            <li>
+                <h3>Jardim Esmeralda</h3>
+                <p>O Jardim Esmeralda, com sua grande quantidade de animais de rua, é um ponto essencial para iniciativas de apoio, como a doação de alimentos e água para os animais.</p>
+            </li>
+            <li>
+                <h3>Jardim Cavallari</h3>
+                <p>Jardim CavallariNo Jardim Cavallari, muitos animais em busca de comida podem ser beneficiados com a distribuição de ração e água para suprir suas necessidades..</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact-form">
+        <h2>Sugira um Novo Local</h2>
+        <form action="#" method="POST">
+            <label for="name">Seu Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="location">Nome do Local:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="description">Descrição do Local:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="submit">Enviar Sugestão</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 WazePet - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="Página/Página.js"></script>
+</body>
+</html>

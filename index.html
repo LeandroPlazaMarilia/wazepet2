@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WazePet Dashboard</title>
+  <link rel="stylesheet" href="src/dashboard/dashboard.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>WazePet</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <img src="src/dashboard/img.enc" height="150" width="250">
+        <a href="index.html" class="active">Página Inicial</a>
+        <a href="src/Página.html">Pontos de água e ração</a>
+        <a href="src/card.html">Animais disponiveis</a>
+        <a href="src/sobre.html">Sobre nós</a>
+        <a href="src/login.html">Entrar</a>
+        <a href="src/cadastrar.html">Cadastro</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h1>Página inicial</h1>
+        <div class="user-profile">
+          <img src="src/dashboard/user.jpeg" alt="User Profile">
+          <span>Olá, Usuário!</span>
+        </div>
+      </header>
+
+      <!-- Widgets -->
+      <section class="widgets">
+        <div class="widget">
+          <h3>Doações Totais</h3>
+          <p>1500+</p>
+        </div>
+        <div class="widget">
+          <h3>Animais Resgatados</h3>
+          <p>120+</p>
+        </div>
+        <div class="widget">
+          <h3>Usuários Ativos</h3>
+          <p>450+</p>
+        </div>
+      </section>
+
+      <!-- Chart and Details -->
+      <section class="chart-details">
+        <div class="chart">
+          <canvas id="donationsChart"></canvas>
+        </div>
+        <!-- Resumo Mensal -->
+        <div class="details">
+            <h2>Resumo Mensal</h2>
+            <ul id="summary-list">
+              <li>Total de Doações: <span id="total-donations">150</span></li>
+              <li>Animais Resgatados: <span id="rescued-animals">25</span></li>
+              <li>Usuários Novos: <span id="new-users">50</span></li>
+            </ul>
+            <button id="update-summary">Atualizar Resumo</button>
+          </div>
+      </section>
+    </div>
+  </div>
+  <script src="src/dashboard/dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
